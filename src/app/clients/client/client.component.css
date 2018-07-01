@@ -1,0 +1,13 @@
+.client{
+min-height:200px;
+padding:10px;
+}
+.client_profile{
+  
+    min-height:200px;
+}
+
+.client_image{
+   border:1px solid lightgray;
+    min-height:200px;
+}
