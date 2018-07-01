@@ -1,5 +1,5 @@
 <div class="row client">
-  <div class="col-sm-8 client client_profile">
+  <div class="col-sm-8 client client-profile">
     <div class="form-group">
       <div class="form-control text-center">
         <h4>Client Name: {{client.name}}</h4>
@@ -12,8 +12,8 @@
     </div>
   </div>
   
-  <div class="col-sm-4 client client_image">
-  <!-- <button class="btn btn-primary btn-lg" (click)="callforNoReason()">Submit</button>-->
+  <div class="col-sm-4 client client-image text-center">
+    <img class="img-responsive" [src]="client.imagePath">
     </div>
     
 
