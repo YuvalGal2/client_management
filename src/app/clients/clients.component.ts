@@ -5,13 +5,13 @@ import {Client} from '../clients/client/client';
   selector: 'app-clients',
   templateUrl: './clients.component.html',
   styleUrls: ['./clients.component.css'],
-  providers: [ClientService]
+  providers: []
 })
 export class ClientsComponent implements OnInit {
 clients:Client[] = [];
   constructor(private clientservice: ClientService) {}
   ngOnInit() {
-    this.clients = this.clientservice.clients;
+    this.clients = this.clientservice.getClients();
   }
 
 }

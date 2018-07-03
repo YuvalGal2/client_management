@@ -4,7 +4,7 @@ import {ClientService} from './client.service';
   selector: 'app-client',
   templateUrl: './client.component.html',
   styleUrls: ['./client.component.css'],
-  providers: [ClientService]
+  providers: []
 })
 export class ClientComponent implements OnInit {
   @Input() client;

@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class FormComponent implements OnInit {
+
   user: Client = {
     name:"",
     age:"",
@@ -22,7 +23,7 @@ export class FormComponent implements OnInit {
   ngOnInit() {}
   addClient(user){
     this.clientservice.addClient(user);
-    console.log(this.clientservice.clients);
+    console.log(this.clientservice.getClients());
   }
 
 }

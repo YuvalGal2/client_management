@@ -1,11 +1,17 @@
 input[type=text]{
     width:90%;
- 
     outline:none;
     transition:0.3s;
     padding:0.63rem; 
+    margin:5px 0px;
 }
-
+.btn{
+    margin:5px 5px;
+}
+.heading_label{
+    font-size:1.2rem;
+    margin:7px 0px; 
+}
 .form-control{
     border-right:0px;
     border-left:0px;
@@ -18,11 +24,23 @@ input[type=text]:focus{
     -webkit-box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.08); 
     box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.08);
     box-sizing: border-box;
+    
 }
 label{
     color:#636e72;
     font-weight: 300;
-    padding:2px;
+    padding:0.63rem; 
+
+    margin:5px 0px;
+}
+@media(min-width:768px){
+    label{
+        width:20%;
+
+    }
+    input[type=text]{
+        width:70%;
+    }
 }
 .no-border{
     border:none;

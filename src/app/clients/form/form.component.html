@@ -1,31 +1,33 @@
+<div class="row">
+<div class="col-sm-12">
 
-    <div class="form-group">
-            <div class="form-control">
-            <label for="name">Client Name : </label>
-            <input  id="name" [(ngModel)]="user.name"   autocomplete="off" type="text">
-            </div>
-            
-        
-            <div class="form-control">
-            <label for="age">Client Age: </label>
-            <input id="age"  [(ngModel)]="user.age"  autocomplete="off"  type="text">
-            </div>
-            
-            <div class="form-control">
-            <label for="loc">Client Location: </label>
-            <input id="loc"  [(ngModel)]="user.location"  autocomplete="off" type="text">
-            </div>
-            
-            <div class="form-control">
-            <label for="path">Client Image Path: </label>
-            <input id="path"  [(ngModel)]="user.imagePath"  autocomplete="off" type="text">
-        </div>
-        <div class="form-control no-border top-spaceing">
-                <button class="btn btn-primary" (click)="addClient(user)">Submit</button>
+   
+                <label for="form-group" class="heading_label">Add Client:</label>
+                <div class="form-group" id="form-group">
+                <div class="form-control">
+                <label for="name">Client Name : </label>
+                <input  id="name" [(ngModel)]="user.name"   autocomplete="off" type="text">
                 </div>
-            
-           
-            
-            
-            </div>
+                <div class="form-control">
+                <label for="age">Client Age: </label>
+                <input id="age"  [(ngModel)]="user.age"  autocomplete="off"  type="text">
+                </div>
+                <div class="form-control">
+                <label for="loc">Client Location: </label>
+                <input id="loc"  [(ngModel)]="user.location"  autocomplete="off" type="text">
+                </div>
+                <div class="form-control">
+                <label for="path">Client Image Path: </label>
+                <input id="path"  [(ngModel)]="user.imagePath"  autocomplete="off" type="text">
+                </div>
+                <div class="form-control no-border top-spaceing">
+                <button class="btn btn-primary" (click)="addClient(user)">Add Client</button>
+                </div>
+                </div>
+                     
+                
         
+             
+        
+
+</div>

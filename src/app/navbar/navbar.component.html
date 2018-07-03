@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+  <!-- navbar logo -->
+  <span class="navbar-brand mb-0 h1">Client Managment</span>
+  <!-- hamburger (if isnavbarcollapsed - expend) -->
+	<button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- property binding to the navbar component [ngbCollapse] is equals to
+     the value of isNavBarCollapsed-->
+	<div [ngbCollapse]="isNavbarCollapsed" class="navbar-collapse">
+		<a class="nav-item nav-link active text-white" [routerLink]="''">
+      Home
+    </a>
+    
+		<a class="nav-item nav-link active text-white">
+      Clients
+    </a>
+       
+		<a class="nav-item nav-link active text-white " [routerLink]="'/addClient'">
+        Add Client
+      </a>
+	</div>
+</nav>
