@@ -1,8 +1,10 @@
+
 import { ClientService } from './clients/client/client.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {  FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ClientComponent } from './clients/client/client.component';
 import { FormComponent } from './clients/form/form.component';
@@ -11,10 +13,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {Routes,RouterModule } from '@angular/router';
 
-
 const routes:Routes = [
-  {path:"",component:ClientsComponent},
-  {path:"addClient",component:FormComponent}
+  {path:"clients",component:ClientsComponent},
+  {path:"",component:HomeComponent},
+  {path:"addClient",component:FormComponent},
+  {path:"**",redirectTo:"/"}
 ];
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ const routes:Routes = [
     ClientComponent,
     FormComponent,
     NavbarComponent,
+    HomeComponent
 
   ],
   imports: [

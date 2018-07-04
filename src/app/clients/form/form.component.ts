@@ -11,19 +11,22 @@ import { Component, OnInit } from '@angular/core';
 
 export class FormComponent implements OnInit {
 
+
+  constructor(private clientservice: ClientService) {
+  
+  }
   user: Client = {
     name:"",
     age:"",
     location:"",
     imagePath:""
   };
-  constructor(private clientservice: ClientService) {
-  
-  }
+
   ngOnInit() {}
   addClient(user){
+  
     this.clientservice.addClient(user);
-    console.log(this.clientservice.getClients());
+   // console.log(this.clientservice.getClients());
   }
 
 }

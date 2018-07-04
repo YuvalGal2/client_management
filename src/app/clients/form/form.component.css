@@ -41,6 +41,10 @@ label{
     input[type=text]{
         width:70%;
     }
+    input[type=text]:focus{
+        width:80%;
+
+    }
 }
 .no-border{
     border:none;

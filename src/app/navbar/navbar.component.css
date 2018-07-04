@@ -1,0 +1,11 @@
+.active{
+  font-weight: 700;
+  border-bottom: 1px solid white;
+}
+@media(max-width:300px){
+  /* fix for ultra small devices. */
+.navbar-brand{
+
+  font-size:1rem;
+}
+}

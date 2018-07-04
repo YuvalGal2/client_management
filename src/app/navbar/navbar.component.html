@@ -9,15 +9,16 @@
   <!-- property binding to the navbar component [ngbCollapse] is equals to
      the value of isNavBarCollapsed-->
 	<div [ngbCollapse]="isNavbarCollapsed" class="navbar-collapse">
-		<a class="nav-item nav-link active text-white" [routerLink]="''">
+    <a class="nav-item nav-link text-white" routerLinkActive="active" 
+    [routerLinkActiveOptions]="{exact:true}" [routerLink]="''">
       Home
     </a>
     
-		<a class="nav-item nav-link active text-white">
+		<a class="nav-item nav-link  text-white" [routerLink]="'/clients'" routerLinkActive="active" >
       Clients
     </a>
        
-		<a class="nav-item nav-link active text-white " [routerLink]="'/addClient'">
+		<a class="nav-item nav-link  text-white "  routerLinkActive="active" [routerLink]="'/addClient'">
         Add Client
       </a>
 	</div>

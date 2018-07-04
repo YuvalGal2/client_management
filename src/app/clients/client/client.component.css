@@ -5,17 +5,38 @@ padding:10px;
 .client-profile{
   
     min-height:200px;
+   
 }
 
 .client-image{
    border-top:1px solid lightgray;
    border-bottom: 1px solid lightgray;
-    max-height:300px !important;
-    overflow:hidden;
+   /*box-sizing: border-box;*/
+    overflow: hidden;
+    height:300px;
+    
     
 }
+.btn-space{
+    margin:5px;
+}
+@media(min-width:768px){
+    .client-image{
+        height:100px;
+        width:100px;
+         
+    }
+    .client-image img{
+        border-width: 50%;
+    }
+    .btn-space{
+        margin:0px 5px;
+    }
+}
 .client-image img{
-width:100%;
-border-radius: 30px;
+    object-fit: scale-down;
+    width:100%;
+    height:100%;
+
 
 }
