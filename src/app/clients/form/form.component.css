@@ -5,6 +5,7 @@ input[type=text]{
     padding:0.63rem; 
     margin:5px 0px;
 }
+
 .btn{
     margin:5px 5px;
 }
@@ -52,4 +53,17 @@ label{
 }
 .top-spaceing{
     margin-top:5px;
+}
+
+
+
+/*
+applying css for input validation 
+*/
+
+input.ng-touched.ng-invalid{
+    border:1px dotted #d63031;
+}
+.error{
+    color:#d63031 !important;
 }

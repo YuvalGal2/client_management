@@ -15,7 +15,7 @@
     </a>
     
 		<a class="nav-item nav-link  text-white" [routerLink]="'/clients'" routerLinkActive="active" >
-      Clients
+      Clients <span class="badge badge-secondary" *ngIf="clients > 0"> {{clients}}  NEW</span>
     </a>
        
 		<a class="nav-item nav-link  text-white "  routerLinkActive="active" [routerLink]="'/addClient'">

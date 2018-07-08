@@ -11,6 +11,9 @@ export class ClientsComponent implements OnInit {
 clients:Client[] = [];
   constructor(private clientservice: ClientService) {}
   ngOnInit() {
+    // when you visit the page the new icon is gone.
+    // and the counter is going back to 0
+    this.clientservice.addedClientsCounter = 0;
     this.clients = this.clientservice.getClients();
   }
 
