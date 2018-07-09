@@ -9,9 +9,10 @@ import {ClientService} from './client.service';
 export class ClientComponent implements OnInit {
   @Input() client;
   constructor(private clientservice: ClientService) {}
-  ngOnInit() {
-  
-  }
+  ngOnInit() {}
 
+onRemoveClient(clientID){
+this.clientservice.RemoveClient(clientID);
+}
 
 }

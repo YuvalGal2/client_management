@@ -7,13 +7,13 @@
           <div class="form-control">
             <p>Client name: {{client.name}}</p>
             <p>Client age: {{client.age}}</p>
-       
+            <p> client id : {{client.id}}</p>
             <p>Client location: {{client.location}}</p>
           </div>
           <div class="form-control ">
               <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" (click)='remove($event)'class="btn btn-info btn-sm btn-space">Edit</button>
-                  <button type="button" class="btn btn-danger btn-sm btn-space">Delete</button>
+                  <button type="button"class="btn btn-info btn-sm btn-space">Edit</button>
+                  <button type="button"  (click)='onRemoveClient(client.id)' class="btn btn-danger btn-sm btn-space">Delete</button>
                   
                 </div>
           </div>

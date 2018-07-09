@@ -1,3 +1,5 @@
+import { Observer } from 'rxjs/Observer';
+import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
 import {ClientService} from './client/client.service';
 import {Client} from '../clients/client/client';
@@ -9,12 +11,13 @@ import {Client} from '../clients/client/client';
 })
 export class ClientsComponent implements OnInit {
 clients:Client[] = [];
+
   constructor(private clientservice: ClientService) {}
   ngOnInit() {
     // when you visit the page the new icon is gone.
     // and the counter is going back to 0
     this.clientservice.addedClientsCounter = 0;
-    this.clients = this.clientservice.getClients();
+    this.clients = this.clientservice.getClientsList();
   }
 
 }
