@@ -1,5 +1,19 @@
 <div class="col-sm-12">
-<app-client *ngFor="let client of clients" [client]="client"></app-client>
+<app-client *ngFor="let client of clients" (clientList)="onDeleteUpdate($event)"
+[client]="client"></app-client>
+
+<div class="row" *ngIf="clients.length == 0 ">
+<div class="col-sm-12 text-center">
+      <h2 class="">No clients were found !</h2>
+      <a  [routerLink]="'/addClient'">
+        Click here to add one !
+      </a>
+</div>
+</div>
+
+
+
+
 </div>
 
 

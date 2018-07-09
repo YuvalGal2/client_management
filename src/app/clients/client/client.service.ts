@@ -18,6 +18,7 @@ export class ClientService{
             let users = this.clients;
              const result = users.filter(client => client.id != id);
             this.setClientList(result);
+            return result;
          }
 
     

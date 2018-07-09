@@ -1,5 +1,6 @@
-import { Component, OnInit,Input} from '@angular/core';
+import { Component, OnInit,Input, Output,EventEmitter} from '@angular/core';
 import {ClientService} from './client.service';
+import {Client} from './client';
 @Component({
   selector: 'app-client',
   templateUrl: './client.component.html',
@@ -7,12 +8,13 @@ import {ClientService} from './client.service';
   providers: []
 })
 export class ClientComponent implements OnInit {
-  @Input() client;
+  @Input() client:Client;
+  @Output() clientList = new EventEmitter();
   constructor(private clientservice: ClientService) {}
   ngOnInit() {}
 
 onRemoveClient(clientID){
-this.clientservice.RemoveClient(clientID);
+this.clientList.emit(this.clientservice.RemoveClient(clientID));
 }
 
 }

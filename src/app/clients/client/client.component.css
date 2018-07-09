@@ -2,13 +2,29 @@ img{
     box-sizing: border-box;
     object-fit:cover;
 }
-
+p{
+    font-size: 1rem;
+    font-weight:200;
+    color:black;
+}
+h4{
+    font-weight: 300;
+}
+@media(min-width:768px){
+    p{
+        font-size:1.2rem;
+        font-weight:200;
+        word-spacing: 2px;
+        color:black;
+        text-transform: uppercase;
+    }
+}
 .client{
 min-height:200px;
 padding:10px;
 }
 .client-profile{
-  
+  margin-top:10px;
     min-height:200px;
    
 }
