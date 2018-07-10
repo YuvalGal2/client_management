@@ -1,25 +1,25 @@
 import { Client } from './client';
 export class ClientService{
-    // in order to watch the number of clients added from the form component until the nav has rest it.
-    //:{name:string,age:string,location:string,imagePath:string}
    private clients:Client[] = [];
+   //tracking the number of added users.
    addedClientsCounter:number = 0;
 
+
     getClientsList(){
-    // console.log(this.clients);
-    return this.clients;
-    }
-    setClientList(clientList:Client[]){
-        this.clients = clientList;
-        console.log(this.clients);
+        return this.clients;
     }
 
-         RemoveClient(id:number){
-            let users = this.clients;
-             const result = users.filter(client => client.id != id);
-            this.setClientList(result);
-            return result;
-         }
+
+    setClientList(clientList:Client[]){
+        this.clients = clientList;
+    }
+
+    RemoveClient(id:number){
+        let users = this.clients;
+        const result = users.filter(client => client.id != id);
+        this.setClientList(result);
+        return result;
+    }
 
     
     addClient(client){

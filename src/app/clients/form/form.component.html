@@ -1,6 +1,6 @@
 <div class="row">
 <div class="col-sm-12">
-<form (ngSubmit)="addClient(user)" #form="ngForm">
+<form (ngSubmit)="addClient(form)" #form="ngForm">
    
                 <label for="form-group" class="heading_label">Add Client:</label>
                 <div class="alert alert-success" role="alert" *ngIf="isSubmitted">
@@ -9,7 +9,7 @@
                 <div class="form-group" id="form-group">
                 <div class="form-control">
                 <label for="name">Client Name : </label>
-                <input  id="name"  #clientName="ngModel" [(ngModel)]="user.name" name="name"   autocomplete="off" type="text" required>
+                <input  id="name"  #clientName="ngModel" name="name"   autocomplete="off" type="text" required ngModel>
                 <small class="form-text text-muted error" *ngIf="!clientName.valid && clientName.touched">Name is required</small>
                 </div>
                 
@@ -17,17 +17,17 @@
 
                 <div class="form-control">
                 <label for="age">Client Age: </label>
-                <input id="age"  #clientAge="ngModel"  [(ngModel)]="user.age"  name="age" autocomplete="off"  type="text" required>
+                <input id="age"  #clientAge="ngModel"    name="age" autocomplete="off"  type="text" ngModel>
                 <small class="form-text text-muted error" *ngIf="!clientAge.valid && clientAge.touched">Age is required</small>
                 </div>
                 <div class="form-control">
                 <label for="loc">Client Location: </label>
-                <input id="loc"  #clientLocation="ngModel"  [(ngModel)]="user.location"  name="location" autocomplete="off" type="text" required>
+                <input id="loc"  #clientLocation="ngModel"    name="location" autocomplete="off" type="text" required ngModel > 
                 <small class="form-text text-muted error" *ngIf="!clientLocation.valid && clientLocation.touched">Location is required</small>
                 </div>
                 <div class="form-control">
                 <label for="path">Client Image Path: </label>
-                <input id="path"  #clientImage="ngModel" [(ngModel)]="user.imagePath" name="path" autocomplete="off" type="text" required >
+                <input id="path"  #clientImage="ngModel"  name="path" autocomplete="off" type="text" required ngModel >
                 <small class="form-text text-muted error" *ngIf="!clientImage.valid && clientImage.touched">Image path is required</small>
                 </div>
                 <div class="form-control no-border top-spaceing">
